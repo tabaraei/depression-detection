@@ -41,7 +41,7 @@ In the original study, however, all these data are merged together and a 3-fold 
 in our approach, we separate preprocessing from feature extraction by concatenating waveforms before applying zero-padding
 to ensure uniform lengths for subsequent feature extraction techniques. Then, three different experiments are performed as following:
 1. Convolutional Neural Network (CNN) utilizing the Log-Mel spectrogram features ![CNN](latex/images/CNN.png)
-2. CNN-LSTM netowork employing the MFCC features ![CNN-LSTM](latex/images/CNN-LSTM.png)
+2. CNN-LSTM network employing the MFCC features ![CNN-LSTM](latex/images/CNN-LSTM.png)
 3. Traditional classifiers (`KNN`, `DecisionTree`, `RandomForest`, `AdaBoost`, and `MLP`) performed on custom statistical features.
 
 ## Results
