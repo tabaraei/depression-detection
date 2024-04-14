@@ -1,0 +1,16 @@
+
+\section{Discussion}\label{sec:discussion}
+
+The findings from our analysis reveal numerous insights into the complexities and potential advancements in utilizing Log-Mel spectrogram features for depression detection. While our approach exhibited promising potential, the overall performance fell short of expectations. We highlight the following observations:
+
+\subsubsection{Limitations of preprocessing}
+
+Firstly, the preprocessing steps applied to the waveform data (Fig.~\ref{fig:zeropad}) may have been overly simplistic, leading to the loss of important information and introducing noise into the analysis. As seen in the sample Log-Mel spectrogram (Fig.~\ref{fig:logmel}) or MFCC (Fig.~\ref{fig:mfcc}) feature maps, a majority of the feature map is simply empty due to zero-padding. The loss of data continues to get worse as we go deepen through our CNN network by downsampling and applying max-pooling. Naive data preprocessing methods may not adequately capture the complexities inherent in the dataset, thereby limiting the effectiveness of subsequent classification algorithms.
+
+\subsubsection{Data Imbalance}
+
+With 132 non-depressed and 30 depressed individuals in the dataset, there is a notable data imbalance. The authors of EATD-Corpus attempted a 3-fold cross-validation instead of adhering to their constrained train/validation sets to achieve more optimistic results. They also implemented data augmentation and resampling, which may distance us from reality by altering the informativeness of the audio samples for distinguishing depression detection. Consequently, it becomes challenging to assess the true effectiveness of their model.
+
+\subsubsection{Classification results}
+
+It was noted that when replicating the training process of the EATD-Corpus using the same experimental setup, we obtained different outcomes. In their original study, they reported achieving an F1-Measure of \texttt{0.66}, precision of \texttt{0.57}, and recall of \texttt{0.78}. However, our replicated results showed an F1-Measure of \texttt{0.5112}, precision of \texttt{0.5255}, and recall of \texttt{0.5137}, which diverged from the reported values in the paper. It can be concluded that the performance of their algorithm may be influenced by the random splitting of folds during K-fold cross-validation.

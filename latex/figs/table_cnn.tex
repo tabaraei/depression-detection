@@ -1,0 +1,27 @@
+
+\begin{table}[!t]
+    \centering
+    \caption{Summary of CNN Architecture Utilizing Log-Mel Features}
+    \label{table:cnn}
+    \begin{tabular}{lll}
+        \toprule
+        \textbf{Layer (type)} & \textbf{Output Shape} & \textbf{Param \#} \\
+        \midrule
+        Conv2d-1 & [162, 6, 78, 18549] & 60 \\
+        BatchNorm2d-2 & [162, 6, 78, 18549] & 12 \\
+        MaxPool2d-3 & [162, 6, 39, 9274] & 0 \\
+        \addlinespace
+        Conv2d-4 & [162, 16, 37, 9272] & 880 \\
+        BatchNorm2d-5 & [162, 16, 37, 9272] & 32 \\
+        MaxPool2d-6 & [162, 16, 18, 4636] & 0 \\
+        \addlinespace
+        Conv2d-7 & [162, 32, 16, 4634] & 4,640 \\
+        BatchNorm2d-8 & [162, 32, 16, 4634] & 64 \\
+        MaxPool2d-9 & [162, 32, 8, 2317] & 0 \\
+        \addlinespace
+        Linear-10 & [162, 64] & 37,961,792 \\
+        Dropout-11 & [162, 64] & 0 \\
+        Linear-12 & [162, 1] & 65 \\
+        \bottomrule
+    \end{tabular}
+\end{table}

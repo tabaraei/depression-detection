@@ -1,0 +1,16 @@
+
+\begin{abstract}
+
+Detecting depression from audio signals has gained significant interest due to its potential for non-intrusive and scalable screening. This study explores the effectiveness of Log-Mel spectrogram features extracted from the Emotional Audio-Textual Depression Corpus (EATD-Corpus) in a convolutional neural network (CNN) for automated depression detection, revealing insights and challenges that underscore the need for improved methodologies\footnote{The code is publicly available online at \url{https://github.com/tabaraei/depression-detection}}.
+
+While our approach showed promise, its overall performance fell short of expectations compared to the results reported by the authors of EATD-Corpus. Replicating the EATD-Corpus training process yielded different results compared to the ones reported in their paper, suggesting sensitivity to fold randomization in K-fold cross-validation.
+
+Key observations include limitations in preprocessing, notably the loss of crucial information and the curse of dimensionality due to simplistic methods such as zero-padding. Data imbalance, with 132 non-depressed and 30 depressed individuals, further complicates the analysis, where the creators of EATD-Corpus utilized optimistic techniques like 3-fold cross-validation, data augmentation, and resampling to overcome this issue.
+
+Our findings highlight the necessity for more advanced preprocessing and algorithmic frameworks tailored to the complex data structure. Future efforts should focus on refining preprocessing techniques and addressing data imbalance to fully recover the potential of Log-Mel features in identifying the depression status of individuals. 
+
+\end{abstract}
+
+\begin{IEEEkeywords}
+    Depression Detection, Acoustic Features, Audio Classification
+\end{IEEEkeywords}
